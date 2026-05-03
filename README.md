@@ -1,6 +1,6 @@
 Web Products API
 
-A simple ASP.NET Core (.NET 10) Web API for managing products with full CRUD operations, built as part of HomeTest development exercise.
+A simple ASP.NET Core (.NET 10) Web API for managing products with full CRUD operations, built as part of a backend development exercise.
 
   Features
 Health check endpoint (public)
@@ -64,4 +64,4 @@ Your Name: Ifeanyi Marvelous Akpati
 
  GitHub Repository
 
-( https://github.com/MarDev-Arch/RoyalVilla/tree/master/RoyalVilla_API)
+(https://github.com/MarDev-Arch/RoyalVilla/tree/master/RoyalVilla_API)
