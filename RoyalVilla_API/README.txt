@@ -1,4 +1,4 @@
-Products API
+Web Products API
 
 A simple ASP.NET Core (.NET 10) Web API for managing products with full CRUD operations, built as part of a backend development exercise.
 
