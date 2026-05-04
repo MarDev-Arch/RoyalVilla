@@ -85,6 +85,7 @@ builder.Services.AddAutoMapper(o =>
 builder.Services.AddScoped<IAuthService, AuthService>();
 //end
 var app = builder.Build();
+app.MapGet("/health", () => Results.Ok("Healthy"));
 // add core start
 app.UseCors("AllowReactApp");
 //add cors end 

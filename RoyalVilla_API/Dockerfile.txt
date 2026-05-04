@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /src
 COPY ["RoyalVilla_API/RoyalVilla_API.csproj", "RoyalVilla_API/"]
@@ -12,3 +13,18 @@ EXPOSE 8080
 ENV ASPNETCORE_URLS=http://+:8080
 COPY --from=build /app/publish .
 ENTRYPOINT ["dotnet", "RoyalVilla_API.dll"]
+=======
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
+WORKDIR /app
+COPY *.csproj ./
+RUN dotnet restore
+COPY . ./
+RUN dotnet publish -c Release -o out
+
+FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS runtime
+WORKDIR /app
+COPY --from=build /app/out .
+ENV ASPNETCORE_URLS=http://+:8080
+EXPOSE 8080
+ENTRYPOINT ["dotnet", "RoyalVilla.dll"]
+>>>>>>> a9f17e4c5f0cecea162d1c51b9ce7825d93b6f36
