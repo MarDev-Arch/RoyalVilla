@@ -49,6 +49,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
         sqlServerOptions => sqlServerOptions.EnableRetryOnFailure()
     ));
 builder.Services.AddAuthorization();
+builder.Services.AddControllers();
 
 //builder.Services.AddDbContext<ApplicationDbContext>(options =>
 //    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
