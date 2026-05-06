@@ -38,6 +38,21 @@ builder.Services.AddAuthentication(Options =>
 
 });
 
+// add AddCors
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReactApp", policy =>
+    {
+        policy
+            .WithOrigins("http://localhost:5173")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
+//end
+
+
+
 // Add services to the container.
 //add connection string to the database
 //builder.Services.AddDbContext<ApplicationDbContext>(options =>
