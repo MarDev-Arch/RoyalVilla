@@ -6,8 +6,8 @@ namespace RoyalVilla_API.Models.DTO
     {
         [Required]
         [EmailAddress]
-        public required string Email { get; set; }
+        public required string email { get; set; }
         [Required]
-        public required string Password { get; set; }
+        public required string password { get; set; }
     }
 }
