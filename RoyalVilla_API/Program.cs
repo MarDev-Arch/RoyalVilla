@@ -44,9 +44,17 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowReactApp", policy =>
     {
         policy
-           .AllowAnyOrigin()
+
+        .WithOrigins(
+                "localhost:5173",
+        "localhost:7067",
+                "https://www.assurancegb.com",
+                "https://royalvilla-8.onrender.com"
+            )
+            // .AllowAnyOrigin()
             .AllowAnyHeader()
-            .AllowAnyMethod();
+            .AllowAnyMethod()
+            .AllowCredentials();
     });
 });
 //end
