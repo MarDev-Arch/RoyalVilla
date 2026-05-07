@@ -46,8 +46,8 @@ builder.Services.AddCors(options =>
         policy
 
         .WithOrigins(
-                "localhost:5173",
-        "localhost:7067",
+                "http://localhost:5173",
+                "http://localhost:7067",
                 "https://www.assurancegb.com",
                 "https://royalvilla-8.onrender.com"
             )
