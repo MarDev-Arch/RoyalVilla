@@ -186,7 +186,7 @@ namespace RoyalVilla_API.Controllers
                 //};
                 //end
                 await _db.SaveChangesAsync();
-                return Ok(villaDTO);
+                return Ok(new { success = true, message = "Record updated successfully", data = villaDTO });
             }
             catch (Exception ex)
             {
