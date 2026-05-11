@@ -198,6 +198,7 @@ namespace RoyalVilla_API.Controllers
 
 
         //Delete Villa
+        [HttpDelete("{id:int}")]
         [ProducesResponseType(typeof(ActionResult<object>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ActionResult<object>), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(ActionResult<object>), StatusCodes.Status404NotFound)]
@@ -216,7 +217,8 @@ namespace RoyalVilla_API.Controllers
                 }
                 _db.Villa.Remove(existingVilla);
                 await _db.SaveChangesAsync();
-                return NoContent();
+                return Ok(new { success = true, message = "Villa removved from records" });
+
             }
             catch (Exception ex)
             {

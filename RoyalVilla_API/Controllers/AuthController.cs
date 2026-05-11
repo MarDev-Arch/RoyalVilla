@@ -85,7 +85,7 @@ namespace RoyalVilla_API.Controllers
             }
         }
 
-        [HttpOptions("Login")] public IActionResult OptionsLogin() { Response.Headers.Add("Access-Control-Allow-Origin", "*"); Response.Headers.Add("Access-Control-Allow-Methods", "POST, OPTIONS"); Response.Headers.Add("Access-Control-Allow-Headers", "Content-Type"); return Ok(); }
+       // [HttpOptions("Login")] public IActionResult OptionsLogin() { Response.Headers.Add("Access-Control-Allow-Origin", "*"); Response.Headers.Add("Access-Control-Allow-Methods", "POST, OPTIONS"); Response.Headers.Add("Access-Control-Allow-Headers", "Content-Type"); return Ok(); }
 
 
 
